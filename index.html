@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/funcao.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form class="formulario">
+            <h2>Registro</h2>
+            
+            <section class="secao">
+                <h3>Informações Pessoais</h3>
+                <label for="nome-completo">Nome Completo</label>
+                <input type="text" id="nome-completo" name="nome-completo" placeholder="Digite seu nome completo" required aria-label="Nome Completo">
+                
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required aria-label="E-mail">
+                
+                <label for="genero">Gênero</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="genero" value="masculino" required> Masculino</label>
+                    <label><input type="radio" name="genero" value="feminino"> Feminino</label>
+                    <label><input type="radio" name="genero" value="outro"> Outro</label>
+                </div>
+                
+                <label for="data-nascimento">Data de Nascimento</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" required aria-label="Data de Nascimento">
+                
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado" required aria-label="Estado">
+                    <option value="">Selecione seu estado</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <!-- Adicione outros estados aqui -->
+                </select>
+                
+                <label for="cidade">Cidade</label>
+                <select id="cidade" name="cidade" required aria-label="Cidade">
+                    <option value="">Selecione sua cidade</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <!-- Adicione outras cidades aqui -->
+                </select>
+                
+                <label for="descricao">Descrição Pessoal</label>
+                <textarea id="descricao" name="descricao" placeholder="Fale um pouco sobre você" aria-label="Descrição Pessoal"></textarea>
+            </section>
+            
+            <section class="secao">
+                <h3>Credenciais</h3>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required aria-label="Senha">
+                
+                <label for="confirmar-senha">Confirmação de Senha</label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha" required aria-label="Confirmação de Senha">
+            </section>
+            
+            <button onclick="enviar()">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
